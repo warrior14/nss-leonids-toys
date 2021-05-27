@@ -52,6 +52,14 @@ const hockeySack = {
 toys.push(boomerang);
 toys.push(hockeySack);
 
-for (const toy of toys) { 
-    console.log(toy.name)
+// for (const toy of toys) { 
+//     console.log(toy.name)
+// };
+
+
+// Iterate Leonid's Toy Catalog
+
+for (const toy of toys) {
+    console.log(`The ${toy.name} was made in ${toy.countryOfOrigin} and we have ${toy.inventory} in our inventory. Someone asked if it is cheap, the answer is ... ${toy.isCheap}.`)
 };
+
