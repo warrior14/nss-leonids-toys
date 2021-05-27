@@ -22,4 +22,12 @@ const toys = [
     }
 ];
 
-console.log(toys);
+// console.log(toys);
+
+for (const toy of toys) {
+    console.log(toy.name)
+};
+
+
+
+
