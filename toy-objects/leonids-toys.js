@@ -22,12 +22,36 @@ const toys = [
     }
 ];
 
+
 // console.log(toys);
 
-for (const toy of toys) {
-    console.log(toy.name)
+// displaying name property of all toys
+
+// for (const toy of toys) { 
+//     console.log(toy.name)
+// };
+
+// Doing new toy exercise with the push method
+
+const boomerang = {
+    id: 4,
+    name: "Boomerang",
+    inventory: 21,
+    isCheap: false,
+    countryOfOrigin: "Australia"
 };
 
+const hockeySack = {
+    id: 5,
+    name: "Hockey-Sack",
+    inventory: 50,
+    isCheap: true,
+    countryOfOrigin: "Philippines"
+};
 
+toys.push(boomerang);
+toys.push(hockeySack);
 
-
+for (const toy of toys) { 
+    console.log(toy.name)
+};
