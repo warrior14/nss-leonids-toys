@@ -4,21 +4,24 @@ const toys = [
         name: "Hot Wheels",
         inventory: 14,
         isCheap: true,
-        countryOfOrigin: "China"
+        countryOfOrigin: "China",
+        price: 5
     },    
     {
         id: 2,
         name: "Legos",
         inventory: 7,
         isCheap: false,
-        countryOfOrigin: "Usa"
+        countryOfOrigin: "Usa",
+        price: 10
     },
     {
         id: 3,
         name: "Frisbee",
         inventory: 21,
         isCheap: true,
-        countryOfOrigin: "India"
+        countryOfOrigin: "India",
+        price: 15
     }
 ];
 
@@ -38,7 +41,8 @@ const boomerang = {
     name: "Boomerang",
     inventory: 21,
     isCheap: false,
-    countryOfOrigin: "Australia"
+    countryOfOrigin: "Australia",
+    price: 20
 };
 
 const hockeySack = {
@@ -46,7 +50,8 @@ const hockeySack = {
     name: "Hockey-Sack",
     inventory: 50,
     isCheap: true,
-    countryOfOrigin: "Philippines"
+    countryOfOrigin: "Philippines",
+    price: 25
 };
 
 toys.push(boomerang);
@@ -59,7 +64,14 @@ toys.push(hockeySack);
 
 // Iterate Leonid's Toy Catalog
 
-for (const toy of toys) {
-    console.log(`The ${toy.name} was made in ${toy.countryOfOrigin} and we have ${toy.inventory} in our inventory. Someone asked if it is cheap, the answer is ... ${toy.isCheap}.`)
-};
+// for (const toy of toys) {
+//     console.log(`The ${toy.name} was made in ${toy.countryOfOrigin} and we have ${toy.inventory} in our inventory. Someone asked if it is cheap, the answer is ... ${toy.isCheap}.`)
+// };
 
+
+
+// Practice Leonids Prices
+for (const toy of toys) {
+    toy.price += toy.price * 0.5
+    console.log(`The ${toy.name} now costs ${toy.price} dollars!`)
+};
