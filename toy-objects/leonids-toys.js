@@ -71,7 +71,19 @@ toys.push(hockeySack);
 
 
 // Practice Leonids Prices
+// for (const toy of toys) {
+//     toy.price += toy.price * 0.5
+//     console.log(`The ${toy.name} now costs ${toy.price} dollars!`)
+// };
+
+// Finding an Item in an array with if inside of for loop exercise
+
+const toyToFind = 3
+
+
 for (const toy of toys) {
-    toy.price += toy.price * 0.5
-    console.log(`The ${toy.name} now costs ${toy.price} dollars!`)
+    if (toy.id === toyToFind) {
+        toy.price = toy.price += 0.5
+        console.log(`The ${toy.name} was made in ${toy.countryOfOrigin} and we have ${toy.inventory} in our inventory. Someone asked if it is cheap, the answer is ... ${toy.isCheap}.`)
+    };
 };
