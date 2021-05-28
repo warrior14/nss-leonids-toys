@@ -78,12 +78,44 @@ toys.push(hockeySack);
 
 // Finding an Item in an array with if inside of for loop exercise
 
-const toyToFind = 3
+// const toyToFind = 3
 
+
+// for (const toy of toys) {
+//     if (toy.id === toyToFind) {
+//         toy.price = toy.price += 0.5
+//         console.log(`The ${toy.name} was made in ${toy.countryOfOrigin} and we have ${toy.inventory} in our inventory. Someone asked if it is cheap, the answer is ... ${toy.isCheap}.`)
+//     };
+// };
+
+
+
+// Practice: Adding Toys with Functions exercise
+
+
+const addToyToInventory = (toyObject) => {
+    const lastIndex = toys.length - 1
+    const currentLastToy = toys[lastIndex]
+    const maxId = currentLastToy.id
+    const idForNewToy = maxId + 1
+    toyObject.id = idForNewToy
+    toys.push(toyObject)
+};
+
+
+const nerfGun = {
+    name: "Nerf Gun",
+    inventory: 26,
+    isCheap: true,
+    countryOfOrigin: "Spain",
+    price: 7
+};
+
+
+addToyToInventory(nerfGun);
 
 for (const toy of toys) {
-    if (toy.id === toyToFind) {
-        toy.price = toy.price += 0.5
-        console.log(`The ${toy.name} was made in ${toy.countryOfOrigin} and we have ${toy.inventory} in our inventory. Someone asked if it is cheap, the answer is ... ${toy.isCheap}.`)
-    };
+    console.log(`The ${toy.name} was made in ${toy.countryOfOrigin} and we have ${toy.inventory} in our inventory. Someone asked if it is cheap, the answer is ... ${toy.isCheap}.`)
 };
+
+console.log(toys);
